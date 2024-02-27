@@ -32,44 +32,36 @@ body {
 }
 
 .trafficlight {
-    width: 150px;
-    height: 350px;
+    width: 450px;
+    height: 120px;
     border: 10px solid black;
     border-radius: 5%;
     background: black;
     position: relative;
     display: flex;
-    flex-direction: column;
-    column-gap: 10px;
+   
+    flex-direction: row;
+    row-gap: 10px;
 
 
 }
 /* Pole */
 
 /* Lights */
-.redlight, .yellowlight, .greenlight, .walklight {
+.redlight, .yellowlight, .greenlight, .walklight, .countlight {
     width: 90px;
     height: 90px;
     position: relative;
-    border: 5px solid black;
+    border: 5px solid rgb(13, 12, 12);
     border-radius: 50%;
-    
-    background: gray;
+    background-color: gray;
 }
 
-.redlight{
-  
-    background: red;
-}
-.yellowlight {
-   
-    background: yellow;
-}
-
-.greenlight {
-  
-    background: green;
-}
 .walklight{
 padding-top: 25px;
+}
+span{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
 }
