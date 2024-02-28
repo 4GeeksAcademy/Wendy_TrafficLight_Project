@@ -18,18 +18,18 @@ let i = 1;
  
      interval = setInterval(() => {
 
-           if(countS==1)   { 
+           if(countS==1) { 
            
-
+            setCountS(5);
 if(i==1)
 {   
-
+ 
   setCountG('gray');
   setCountR('gray');
   setCountY('yellow');  
-  
+  console.log('This is the current position :'+i); 
 i=2;
-console.log('This is the current position :'+i); 
+
 
 }
 
@@ -38,18 +38,19 @@ else if(i==2){
   setCountG('green');
   setCountR('gray'); 
   setCountY('gray');
-  
-   i=3;
-console.log('This should be 3rd position :'+i);
+  console.log('This should be 3rd position :'+i);
+i=3;
+
 
 }
   else if(i==3) {
-  
+   
     setCountG('gray');
     setCountR('red');
-    setCountY('gray');   
-    i=1;
-console.log('This is the current position :'+ i);
+    setCountY('gray');  
+    console.log('This is the current position :'+ i); 
+ 
+i=1
   }
   
       }
@@ -59,7 +60,7 @@ console.log('This is the current position :'+ i);
       }
    
   
-    }, 3000);
+    }, 1000);
 
   
     return () => {
