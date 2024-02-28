@@ -83,16 +83,40 @@ setCount(1);
 
 	return	(
         <div class="container">
+
+<div class="rectangle1" >
+<span id="red-light" class="red-circle"></span>
+<span id="orange-light" class="orange-circle"></span>
+<span id="green-light" class="green-circle"></span>
+<span id="walk-light" class="green-circle"></span>
+</div>
+<div class="rectangle2"></div>
+<div class="rectangle3"></div>
+
+
+
+
+
+
+
+
+{/* 
         <div class="trafficlight">
             <div class="countlight"><span>{countS}</span></div>
-            <div class="redlight" style={{ backgroundColor:countR }}></div>
+            <div class="redlight" style={{ backgroundColor:countR }}><strong></strong></div>
             <div class="yellowlight" style={{ backgroundColor:countY }}></div>
             <div class="greenlight" style={{ backgroundColor:countG}}></div>
             <div class="walklight" style={{ backgroundColor:countW}}><i class="fa-solid fa-person-walking fa-2xl"></i></div>
             
             </div>
             <button type="button" class="btn btn-secondary" onClick={()=>CrossStreet()}>Press the button if you want to cross</button>
-     
+      */}
+
+
+
+
+
+
     </div>
      
       
