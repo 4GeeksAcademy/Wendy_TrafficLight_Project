@@ -9,48 +9,46 @@ export const TrafficLight= ()=> {
   const [countY, setCountY] = useState('gray');
   const [countG, setCountG] = useState('gray');   
   const [countS, setCountS] = useState(5);
+  const [countI, setCountI] = useState(1);
   
   
 
 let  interval;
-let i = 1;
+let  interval2;
+
   useEffect(() => {
  
      interval = setInterval(() => {
 
-           if(countS==1) { 
+    if(countS==1) { 
            
             setCountS(5);
-if(i==1)
+if(countI==1)
 {   
  
   setCountG('gray');
   setCountR('gray');
   setCountY('yellow');  
-  console.log('This is the current position :'+i); 
-i=2;
-
+  setCountI(2);
 
 }
 
-else if(i==2){
+else if(countI==2){
  
   setCountG('green');
   setCountR('gray'); 
   setCountY('gray');
-  console.log('This should be 3rd position :'+i);
-i=3;
+  setCountI(3);
 
 
 }
-  else if(i==3) {
+  else if(countI==3) {
    
     setCountG('gray');
     setCountR('red');
     setCountY('gray');  
-    console.log('This is the current position :'+ i); 
- 
-i=1
+    setCountI(1);
+
   }
   
       }
@@ -72,11 +70,23 @@ i=1
 
 
 function CrossStreet (){
- 
-clearInterval(interval);
 
+console.log(countS);
+interval2 = setInterval(() => {
 
+if(countI==1)
+{   
+  setCountG('gray');
+  setCountR('gray');
+  setCountY('gray');  
+ // setCountI(10);
+ console.log('test cross button')
+}
+},1000);
+return() => {
+  clearInterval(interval2);
 
+}
 }
 
 
