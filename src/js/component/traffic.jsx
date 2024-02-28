@@ -9,7 +9,7 @@ export const TrafficLight= ()=> {
   const [countY, setCountY] = useState('blank-circle');
   const [countG, setCountG] = useState('blank-circle');  
   const [countW, setCountW] = useState('blank-circle');  
-  const [countS, setCountS] = useState(10);
+  const [countS, setCountS] = useState(5);
   const [countI, setCountI] = useState(1);
   const [count, setCount] = useState(0);
 
@@ -25,7 +25,7 @@ let  interval;
         setCountY('blank-circle');  
         setCountW('white-circle');
         setCount(0);
-        setCountS(10);
+        setCountS(5);
 
       }
 
@@ -85,6 +85,7 @@ setCount(1);
         <div class="container">
 
 <div class="rectangle1" >
+<div class="count-circle">{countS}</div>
 <span id="red-light"  class={countR}></span>
 <span id="orange-light"  class={countY}></span>
 <span id="green-light" class={countG}></span>
@@ -92,6 +93,9 @@ setCount(1);
 </div>
 <div class="rectangle2"></div>
 <div class="rectangle3"></div>
+<div class="rectangle4"><button type="button" class="btn btn-success round-circle" onClick={()=>CrossStreet()}>Push here to cross</button></div>
+
+
 
 
 

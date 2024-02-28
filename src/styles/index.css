@@ -9,10 +9,24 @@
     margin: 10px;
     }
 
+    .count-circle {
+        height: 70px;
+        width: 70px;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 70px;
+        background-color: grey;
+        border-radius: 50%;
+        display:inline-table;
+        border:1px solid black;
+        margin: 10px;
+        }
+
+
     .white-circle {
-        height: 90px;
-        width: 90px;
-        line-height: 90px;
+        height: 70px;
+        width: 70px;
+        line-height: 70px;
         background-color: white;
         border-radius: 50%;
         display:inline-table;
@@ -46,7 +60,7 @@
             .orange-circle {
                 height: 70px;
                 width: 70px;
-                line-height: 90px;
+                line-height: 70px;
                 background-color: rgb(243, 181, 66);
                 border-radius: 50%;
                 display:inline-table;
@@ -58,7 +72,7 @@
                 .rectangle1{
                     background: #3b3a3a;
                     width: 110px;
-                    height: 400px;
+                    height: 500px;
                     margin-left: auto;
                     margin-right: auto;
                     margin-top: 30px;
@@ -88,3 +102,13 @@
     margin-top: 0px;
     margin-bottom: auto;
     }               
+
+
+    .rectangle4{
+        background: #3b3a3a;
+        width: 60px;
+        height: 100px;
+        position: absolute;
+       right: 40px;
+       bottom:200px;
+        }
