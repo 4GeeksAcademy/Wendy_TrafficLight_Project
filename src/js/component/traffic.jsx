@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 //create your first component
 export const TrafficLight= ()=> {
 
-  const [countR, setCountR] = useState('red');
-  const [countY, setCountY] = useState('gray');
-  const [countG, setCountG] = useState('gray');  
-  const [countW, setCountW] = useState('gray');  
+  const [countR, setCountR] = useState('red-circle');
+  const [countY, setCountY] = useState('blank-circle');
+  const [countG, setCountG] = useState('blank-circle');  
+  const [countW, setCountW] = useState('blank-circle');  
   const [countS, setCountS] = useState(10);
   const [countI, setCountI] = useState(1);
   const [count, setCount] = useState(0);
@@ -20,39 +20,39 @@ let  interval;
      interval = setInterval(() => {
 
       if(countS==1 && count==1) { 
-        setCountG('gray');
-        setCountR('gray');
-        setCountY('gray');  
-        setCountW('white');
+        setCountG('blank-circle');
+        setCountR('blank-circle');
+        setCountY('blank-circle');  
+        setCountW('white-circle');
         setCount(0);
         setCountS(10);
 
       }
 
   else if(countS==1 && count==0) { 
-       setCountS(10);
+       setCountS(5);
 if(countI==1)
 {   
-  setCountG('gray');
-  setCountR('gray');
-  setCountY('yellow');  
-  setCountW('gray');
+  setCountG('blank-circle');
+  setCountR('blank-circle');
+  setCountY('orange-circle');  
+  setCountW('blank-circle');
   setCountI(2);
 }
 
 else if(countI==2){
-  setCountW('gray');
-  setCountG('green');
-  setCountR('gray'); 
-  setCountY('gray');
+  setCountW('blank-circle');
+  setCountG('green-circle');
+  setCountR('blank-circle'); 
+  setCountY('blank-circle');
   setCountI(3);
 
 }
   else if(countI==3) {
-    setCountW('gray');
-    setCountG('gray');
-    setCountR('red');
-    setCountY('gray');  
+    setCountW('blank-circle');
+    setCountG('blank-circle');
+    setCountR('red-circle');
+    setCountY('blank-circle');  
     setCountI(1);
 
   }
@@ -85,10 +85,10 @@ setCount(1);
         <div class="container">
 
 <div class="rectangle1" >
-<span id="red-light" class="red-circle"></span>
-<span id="orange-light" class="orange-circle"></span>
-<span id="green-light" class="green-circle"></span>
-<span id="walk-light" class="green-circle"></span>
+<span id="red-light"  class={countR}></span>
+<span id="orange-light"  class={countY}></span>
+<span id="green-light" class={countG}></span>
+<span id="walk-light" class={countW}  onClick={()=>CrossStreet()}><i class="fa-solid fa-person-walking fa-2xl"></i></span>
 </div>
 <div class="rectangle2"></div>
 <div class="rectangle3"></div>
